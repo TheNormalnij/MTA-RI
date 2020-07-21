@@ -1,5 +1,7 @@
 # MTA-RI
-Fun interface between resources in MTA:SA
+Fun interface between resources in MTA:SA.
+Can be used for access to variables, class objects, functions. Can override functions.
+You can share refs with anothor resources.
 
 # Install
 Copy refinterface.lua in your resources and add exports function from meta.xml
@@ -8,15 +10,16 @@ Copy refinterface.lua in your resources and add exports function from meta.xml
 
 Resource "ref_test1"
 ```
-RI.ref_test2.new_value = 100
-RI.ref_test2.HERE_TABLE.value = 150
+local ref_test2 = RI.ref_test2
+ref_test2.new_value = 100
+ref_test2.HERE_TABLE.value = 150
 
 local t = { 200 }
-RI.ref_test2.ANOTHER_TABLE = t
+ref_test2.ANOTHER_TABLE = t
 
-RI.ref_test2.test_function( 'new' )
+ref_test2.test_function( 'new' )
 
-RI.ref_test2.getVehicleNameFromModel = function( id )
+ref_test2.getVehicleNameFromModel = function( id )
    return "Vehicle ID:" .. id
 end
 ```
@@ -41,4 +44,4 @@ end
 
 # Warnings
 - It's slow
-- 
+- Beware of the garbage collector
