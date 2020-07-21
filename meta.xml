@@ -1,0 +1,12 @@
+<meta>
+    <script src="refinterfeace.lua" type="client" />
+
+    <export function="__RI" type="shared" />
+    <export function="__RISR" type="shared" />
+    <export function="__RIGR" type="shared" />
+    <export function="__RIS" type="shared" />
+    <export function="__RIG" type="shared" />
+    <export function="__RIC" type="shared" />
+    <export function="__RICR" type="shared" />
+    <export function="__RID" type="shared" />
+</meta>
