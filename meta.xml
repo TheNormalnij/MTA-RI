@@ -1,5 +1,5 @@
 <meta>
-    <script src="refinterfeace.lua" type="shared" />
+    <script src="refinterface.lua" type="shared" />
 
     <export function="__RI" type="shared" />
     <export function="__RISR" type="shared" />
